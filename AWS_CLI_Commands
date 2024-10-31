@@ -16,4 +16,12 @@
 
 - aws iam add-user-to-group --user-name prashant1 --group-name Admins
 
+To find out what your AWS account ID is, please run the 
+		- aws sts get-caller-identity --query Account
+
+create the policy, use the put-user-policy command, which attaches a policy to the IAM user plakhera: 
+	aws iam put-user-policy --user-name prashant1 --policy-name ec2_restrict --policy-document file://ec2-instance.json
+
+list the policy we created earlier, use the get-user-policy command: 
+	aws iam get-user-policy --user-name  prashant1 --policy-name ec2_restrict
 
