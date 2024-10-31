@@ -9,3 +9,9 @@
 
 - aws ec2 describe-instance-type-offerings --query InstanceTypeOfferings --output table
 
+- aws iam create-user --user-name <provided username>
+
+- aws iam list-users --query Users[].[UserName,Arn] --output table
+
+- aws iam list-groups --query Groups[].[GroupName,Arn] --output table
+
