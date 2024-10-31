@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "ap-southeast-1"
 }
 
 
@@ -56,8 +56,8 @@ resource "aws_iam_instance_profile" "my-test-iam-instance-profile" {
 
 
 resource "aws_instance" "test_ec2_role" {
-  ami                  = "ami-0d5fad86866a3a449"
+  ami                  = "ami-0d130eab12d1ea78a"
   instance_type        = "t2.micro"
   iam_instance_profile = "${aws_iam_instance_profile.my-test-iam-instance-profile.name}"
-  key_name             = "packtpub"
+  key_name             = "aws_key_berryhamzah"
 }
