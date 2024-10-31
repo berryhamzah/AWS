@@ -5,7 +5,6 @@
 - aws cloudformation validate-template --template-body file://ec2-instance.yml {
 
 - aws create-stack --stack-name first-ec2-instance-creation --template-body file://ec2-instance.yml  --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" { "StackId": "arn:aws:cloudformation:us-west-2:XXXXXXXX:stack/first-ec2-instance-creation/cf6e6100-b3ed-11ea-b69a-0a233d312e0a" }
--
 
 - aws ec2 describe-instance-type-offerings --query InstanceTypeOfferings --output table
 
@@ -14,4 +13,7 @@
 - aws iam list-users --query Users[].[UserName,Arn] --output table
 
 - aws iam list-groups --query Groups[].[GroupName,Arn] --output table
+
+- aws iam add-user-to-group --user-name prashant1 --group-name Admins
+
 
