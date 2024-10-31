@@ -1,0 +1,11 @@
+
+
+- aws ec2 describe-images --owners aws-marketplace --filters Name=product-code,Values=aw0evgkw8e5c1q413zgy5pjce --query 'Images[*].[CreationDate,Name,ImageId]' --filters "Name=name,Values=CentOS Linux 7*" --region us-west-2 --output table | sort -r
+
+- aws cloudformation validate-template --template-body file://ec2-instance.yml {
+
+- aws create-stack --stack-name first-ec2-instance-creation --template-body file://ec2-instance.yml  --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" { "StackId": "arn:aws:cloudformation:us-west-2:XXXXXXXX:stack/first-ec2-instance-creation/cf6e6100-b3ed-11ea-b69a-0a233d312e0a" }
+-
+
+- aws ec2 describe-instance-type-offerings --query InstanceTypeOfferings --output table
+
