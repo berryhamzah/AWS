@@ -22,7 +22,7 @@ Resources:
   EC2InstanceProdEnv:
     Type: AWS::EC2::Instance
     Properties:
-      AvailabilityZone: "ap-southeast-2"
+      AvailabilityZone: "ap-southeast-2a"
       BlockDeviceMappings:
       - DeviceName: "/dev/sda1"
         Ebs:
