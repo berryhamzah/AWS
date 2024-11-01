@@ -27,7 +27,7 @@ Resources:
       MapPublicIpOnLaunch: true
       Tags:
       - Key: Name
-        Value: vpc-dr-us-east-2a
+        Value: vpc-dr-ap-southeast-2a
       VpcId: !Ref Vpc
 
   PrivatesubnetB:
@@ -38,7 +38,7 @@ Resources:
       MapPublicIpOnLaunch: false
       Tags:
       - Key: Name
-        Value: vpc-dr-us-east-2b
+        Value: vpc-dr-ap-southeast-2b
       VpcId: !Ref Vpc
 
   PrivatesubnetC:
@@ -49,7 +49,7 @@ Resources:
       MapPublicIpOnLaunch: false
       Tags:
       - Key: Name
-        Value: vpc-dr-us-east-2c
+        Value: vpc-ap-southeast-2c
       VpcId: !Ref Vpc
 
   
