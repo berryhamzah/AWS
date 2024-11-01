@@ -22,14 +22,14 @@ Resources:
   EC2InstanceProdEnv:
     Type: AWS::EC2::Instance
     Properties:
-      AvailabilityZone: "us-east-2a"
+      AvailabilityZone: "ap-southeast-2"
       BlockDeviceMappings:
       - DeviceName: "/dev/sda1"
         Ebs:
           DeleteOnTermination: 'true'
           VolumeSize: '8'
           VolumeType: gp2
-      ImageId: "ami-07c8bc5c1ce9598c3"
+      ImageId: "ami-0f71013b2c8bd2c29"
       InstanceType: "t2.micro"
       NetworkInterfaces:
       - Description: "Primary network interface"
